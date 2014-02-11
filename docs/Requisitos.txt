@@ -1,0 +1,29 @@
+PRODUCCION:REMO 10.0.224.92
+librerias_perl
+CGI
+
+
+Una web donde puedas dar GESTIONAR hosts (etc/hosts)
+y asi evitar que metan a mano cosas "chungas"
+
+Tiene que haber un loggin para usuario nada mas llegar
+
+ALTA / BAJA / MODIFICACION individual
+ALTA / BAJA masiva
+
+Que autogenere un backup diario (me han dicho por cada ejecucion... nuse) desde mysql-> fichero texto
+Que genere un log con actividad: ej:
+					Tabla de logs
+                     - ALTA - HOSTNOMBRE - 1.2.3.4 - Usuario Logado - Fecha actividad
+Que una vez cada n (1,2,3 dias) haga un backup con el log
+
+
+PRUEBAS (FUNCIONES) A HACER
+
+ip tiene pinta de ip
+host no tiene caractaeres fuera de [0-9][a-zA-Z][_]   DUDA ¿alguno mas?
+
+
+Una vez validado formato anterior
+Comprobar que no exista una ip igual ya dada de alta
+Comprobar que n o exista un host igual ya dado de alta
