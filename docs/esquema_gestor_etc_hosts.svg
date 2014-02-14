@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="98.404861"
-     inkscape:cy="1017.7617"
+     inkscape:zoom="1.4"
+     inkscape:cx="-1381.0985"
+     inkscape:cy="642.70327"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -36,15 +36,7 @@
      inkscape:window-y="35"
      inkscape:window-maximized="1"
      showborder="false"
-     inkscape:showpageshadow="false">
-    <inkscape:grid
-       type="xygrid"
-       id="grid3877"
-       empspacing="5"
-       visible="true"
-       enabled="true"
-       snapvisiblegridlinesonly="true" />
-  </sodipodi:namedview>
+     inkscape:showpageshadow="false" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -53,7 +45,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -63,10 +55,10 @@
      id="layer1"
      transform="translate(0,207.63782)">
     <rect
-       style="fill:none;stroke:#000000;stroke-width:15.89999962;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;stroke:#000000;stroke-width:15.90000057;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        id="rect2985"
        width="509.28571"
-       height="580"
+       height="293.11667"
        x="-129.28571"
        y="-147.63782" />
     <text
@@ -472,5 +464,258 @@
        id="path4093"
        inkscape:connector-curvature="0"
        transform="translate(0,-207.63782)" />
+    <text
+       xml:space="preserve"
+       style="font-size:56px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="-1162.5918"
+       y="287.06"
+       id="text3976-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="-1162.5918"
+         y="287.06"
+         id="tspan5306">FUNCIONES PERL</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="-1147.9032"
+       y="345.04312"
+       id="text4063-4"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="345.04312"
+         id="tspan4067-9">darAltaN</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="360.04312"
+         id="tspan5340">recibe hash con h{ip} =&gt; host</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="375.04312"
+         id="tspan5346">Los recorre y llama a darAlta1(ip, host)</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="390.04312"
+         id="tspan5352" /><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="405.04312"
+         id="tspan5358">darAlta1</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="420.04312"
+         id="tspan5360">recibe 2 variables: ip, host</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="435.04312"
+         id="tspan5348">añade a /etc/hosts</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="450.04312"
+         id="tspan5414">actualizas log (quien, que)</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="465.04312"
+         id="tspan5362" /><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="480.04312"
+         id="tspan5366" /><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="495.04312"
+         id="tspan5368">borrarN</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="510.04312"
+         id="tspan5370">recibe hash con h{ip} =&gt; host</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="525.04309"
+         id="tspan5372">Lo recorre y llama a borrar1(ip,host)</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="540.04309"
+         id="tspan5374" /><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="555.04309"
+         id="tspan5376">borrar1</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="570.04309"
+         id="tspan5380">recibe 2 variables: ip, host</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="585.04309"
+         id="tspan5382">borra de /etc/hosts</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="600.04309"
+         id="tspan5378" /><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="615.04309"
+         id="tspan5390" /><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="630.04309"
+         id="tspan5392">modificar1</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="645.04309"
+         id="tspan5394">recibe 2 vairables: ip,host</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="660.04309"
+         id="tspan5396">llama:</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="675.04309"
+         id="tspan5398">borrar1(ip,host)</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="690.04309"
+         id="tspan5400">darAlta1(ip,host)</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="705.04309"
+         id="tspan5402" /><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="720.04309"
+         id="tspan5404" /><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="735.04309"
+         id="tspan5406">hacerCopiaSeguridad</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="750.04309"
+         id="tspan5350" /><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="765.04309"
+         id="tspan5344">actualizarLog(quien, que)</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="780.04309"
+         id="tspan5416">quien = ip, usuario</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="795.04309"
+         id="tspan5418">que = accion, datos (ip, host)</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="810.04309"
+         id="tspan5420">se calcuala timestamp</tspan><tspan
+         sodipodi:role="line"
+         x="-1147.9032"
+         y="825.04309"
+         id="tspan5422" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:56px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="-1744.3815"
+       y="287.74695"
+       id="text3976-9-9"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="-1744.3815"
+         y="287.74695"
+         id="tspan5445">.CGF app</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="-1719.2856"
+       y="541.42859"
+       id="text5449"
+       sodipodi:linespacing="125%"
+       transform="translate(0,-207.63782)"><tspan
+         sodipodi:role="line"
+         id="tspan5451"
+         x="-1719.2856"
+         y="541.42859">// numero dias que se guarda log</tspan><tspan
+         sodipodi:role="line"
+         x="-1719.2856"
+         y="556.42859"
+         id="tspan5453">numero_dias_almacenamiento_log_actividad = 10 </tspan><tspan
+         sodipodi:role="line"
+         x="-1719.2856"
+         y="571.42859"
+         id="tspan5455" /><tspan
+         sodipodi:role="line"
+         x="-1719.2856"
+         y="586.42859"
+         id="tspan5457">// valida ip version 4</tspan><tspan
+         sodipodi:role="line"
+         x="-1719.2856"
+         y="601.42859"
+         id="tspan5459">valida_ip_v4 = 1;</tspan><tspan
+         sodipodi:role="line"
+         x="-1719.2856"
+         y="616.42859"
+         id="tspan5461">// valida ip version 6</tspan><tspan
+         sodipodi:role="line"
+         x="-1719.2856"
+         y="631.42859"
+         id="tspan5463">valida_ip_v6 = 1;</tspan><tspan
+         sodipodi:role="line"
+         x="-1719.2856"
+         y="646.42859"
+         id="tspan5465" /><tspan
+         sodipodi:role="line"
+         x="-1719.2856"
+         y="661.42859"
+         id="tspan5467">//  escribe el log_actividad a mysql</tspan><tspan
+         sodipodi:role="line"
+         x="-1719.2856"
+         y="676.42859"
+         id="tspan5469">log_actividad_to_mysql = 'nombre_bbdd';</tspan><tspan
+         sodipodi:role="line"
+         x="-1719.2856"
+         y="691.42859"
+         id="tspan5471"></tspan><tspan
+         sodipodi:role="line"
+         x="-1719.2856"
+         y="706.42859"
+         id="tspan5475">// escribe log de actividad a file</tspan><tspan
+         sodipodi:role="line"
+         x="-1719.2856"
+         y="721.42859"
+         id="tspan5473">log_to_file = 'path/al/file';</tspan><tspan
+         sodipodi:role="line"
+         x="-1719.2856"
+         y="736.42859"
+         id="tspan5477" /><tspan
+         sodipodi:role="line"
+         x="-1719.2856"
+         y="751.42859"
+         id="tspan5479">// autentificacion bbdd</tspan><tspan
+         sodipodi:role="line"
+         x="-1719.2856"
+         y="766.42859"
+         id="tspan5481">mysql_user_name = 'xx'</tspan><tspan
+         sodipodi:role="line"
+         x="-1719.2856"
+         y="781.42859"
+         id="tspan5483">mysql_password = 'xx'</tspan><tspan
+         sodipodi:role="line"
+         x="-1719.2856"
+         y="796.42859"
+         id="tspan5485">mysql_db_name = 'xx'</tspan><tspan
+         sodipodi:role="line"
+         x="-1719.2856"
+         y="811.42859"
+         id="tspan5487" /><tspan
+         sodipodi:role="line"
+         x="-1719.2856"
+         y="826.42859"
+         id="tspan5489">// auntenticacion app</tspan><tspan
+         sodipodi:role="line"
+         x="-1719.2856"
+         y="841.42859"
+         id="tspan5491" /></text>
   </g>
 </svg>

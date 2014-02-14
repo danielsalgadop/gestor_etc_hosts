@@ -8,5 +8,10 @@ Opciones:
 - consultarlo de una bbdd
 
 ¿aguanta dataTables 100.000 entradas?
-hare pruebas en tests/datatables_carga
+hare pruebas en tests/data_tables_con_muchos_datos
+
+
+Pruebas de CARGA
+¿que pasa si hay n procesos haciendo cargas masivas?
+¿aguanta mysqld con 100 megas de RAM?
 
