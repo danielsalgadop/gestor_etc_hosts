@@ -1,0 +1,12 @@
+__LISTA DE TESTS y su ESTADO__
+
+¿guardar /etc/host en memoria?
+a dia de hoy ( 2014-02-14) en MERLIN2 /etc/hosts ocupa 2 megas
+Opciones:
+- guardarlo en memoria en forma de hash
+- consultarlo del fichero "cada vez"
+- consultarlo de una bbdd
+
+¿aguanta dataTables 100.000 entradas?
+hare pruebas en tests/datatables_carga
+
