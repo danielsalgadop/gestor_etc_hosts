@@ -21,13 +21,13 @@ sub cargarHost($){
 
 
 # cargar host (uno ficticio)
-open(HOST, "hosts");
-my @host = (<HOST>);
-close(HOST);
-# print Dumper(@host);
+# open(HOST, "hosts");
+# my @hosts = (<HOST>);
+# close(HOST);
+# print Dumper(@hosts);
 
 my %etc_hosts = cargarHost("hosts");
-print Dumper(%etc_hosts);
+# print Dumper(%etc_hosts);
 
  print <<HTML;
  <html>
@@ -60,74 +60,40 @@ print Dumper(%etc_hosts);
 			</div>
 			<h1>Live example</h1>
 			<div id="demo">
-<table cellpadding="0" cellspacing="0" border="0" class="display" id="example" width="100%">
-	<thead>
-		<tr>
-			<th>Rendering engine</th>
-			<th>Browser</th>
-			<th>Platform(s)</th>
-			<th>Engine version</th>
-			<th>CSS grade</th>
-		</tr>
-	</thead>
+			<table cellpadding="0" cellspacing="0" border="0" class="display" id="example" width="100%">
+				<thead>
+					<tr>
+						<th>IP</th>
+						<th>HOSTNAME</th>
+						<!-- <th>Platform(s)</th> -->
+						<!-- <th>Engine version</th> -->
+						<!-- <th>CSS grade</th> -->
+					</tr>
+				</thead>
+				<tbody>
 HTML
-foreach (@hosts){
+			foreach (keys(%etc_hosts)){
+				print "<tr>";
+					print "<td>";
+					print $_;
+					print "</td>";
+					print "<td>";
+					print $etc_hosts{$_};
+					print "</td>";
 
-}
-print <<HTML;
-	<tbody>
-		<tr class="odd gradeX">
-			<td>Trident</td>
-			<td>Internet
-				 Explorer 4.0</td>
-			<td>Win 95+</td>
-			<td class="center"> 4</td>
-			<td class="center">X</td>
-		</tr>
-		<tr class="even gradeC">
-			<td>Trident</td>
-			<td>Internet
-				 Explorer 5.0</td>
-			<td>Win 95+</td>
-			<td class="center">5</td>
-			<td class="center">C</td>
-		</tr>
-		<tr class="odd gradeA">
-			<td>Trident</td>
-			<td>Internet
-				 Explorer 5.5</td>
-			<td>Win 95+</td>
-			<td class="center">5.5</td>
-			<td class="center">A</td>
-		</tr>
-		<tr class="even gradeA">
-			<td>Trident</td>
-			<td>Internet
-				 Explorer 6</td>
-			<td>Win 98+</td>
-			<td class="center">6</td>
-			<td class="center">A</td>
-		</tr>
-		<tr class="odd gradeA">
-			<td>Trident</td>
-			<td>Internet Explorer 7</td>
-			<td>Win XP SP2+</td>
-			<td class="center">7</td>
-			<td class="center">A</td>
-		</tr>
-	</tbody>
-	<tfoot>
-		<tr>
-			<th>Rendering engine</th>
-			<th>Browser</th>
-			<th>Platform(s)</th>
-			<th>Engine version</th>
-			<th>CSS grade</th>
-		</tr>
-	</tfoot>
-</table>
-			</div>
+				print "</tr>";
+			}
+		print <<HTML;
+			</tbody>
+			<tfoot>
+				<tr>
+					<th>IP</th>
+					<th>HOSTNAME</th>
+				</tr>
+			</tfoot>
+		</table>
+			</div> <!-- fin de demo -->
 			<div class="spacer"></div>
-		</div>
+		</div>  <!-- fin de container -->
 	</body>
 HTML
