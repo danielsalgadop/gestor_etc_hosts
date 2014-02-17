@@ -4,29 +4,7 @@ use Data::Dumper;
 print "Content-type: text/html\n\n";
 my $path_web = "/carga_datatables";
 
-# Cargar los datos de ipservicio_nodo.txt y devolverlo en un hash
-sub cargarHost($){
-	my $path_y_fichero_ip_servicio_nodo = shift;
-	my %ipservicio_nodo;
-	our $fallo_grave_mensaje;
-	open (IPSERV, $path_y_fichero_ip_servicio_nodo)  or die $fallo_grave_mensaje ." [u803ry893r] intentando abrir ".$path_y_fichero_ip_servicio_nodo." error[".$!."]";; # No hay control de errores por que se comprueba en bootApp
-	while(<IPSERV>){
-		next if $_!~/^\d/;   # pasar a siguiente si no comienza por un numero
-		my @datos_splited = split(/\s+/,$_);
-		$ipservicio_nodo{$datos_splited[0]} = $datos_splited[1];
-	}
-	close IPSERV;
-	return(%ipservicio_nodo);
-}
 
-
-# cargar host (uno ficticio)
-# open(HOST, "hosts");
-# my @hosts = (<HOST>);
-# close(HOST);
-# print Dumper(@hosts);
-
-my %etc_hosts = cargarHost("hosts");
 # print Dumper(%etc_hosts);
 
  print <<HTML;
@@ -36,7 +14,7 @@ my %etc_hosts = cargarHost("hosts");
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<link rel="shortcut icon" type="image/ico" href="http://www.datatables.net/favicon.ico" />
-		
+
 		<title>PRUEBA DE CARGA DATATABLES</title>
 		<style type="text/css" title="currentStyle">
 			\@import "$path_web/css/demo_page.css";
@@ -82,7 +60,7 @@ my %etc_hosts = cargarHost("hosts");
 					<td>HOSTAME</td>
 				</tr>
 HTML
-			foreach (keys(%etc_hosts)){
+			# foreach (keys(%etc_hosts)){
 				# print "<tr>";
 				# 	print "<td>";
 				# 	print $_;
@@ -92,7 +70,7 @@ HTML
 				# 	print "</td>";
 
 				# print "</tr>";
-			}
+			# }
 		print <<HTML;
 			</tbody>
 			<tfoot>
