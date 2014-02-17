@@ -46,7 +46,13 @@ my %etc_hosts = cargarHost("hosts");
 		<script type="text/javascript" language="javascript" src="$path_web/js/jquery.dataTables.js"></script>
 		<script type="text/javascript" charset="utf-8">
 			\$(document).ready(function() {
-				\$('#example').dataTable();
+				\$('#example').dataTable({
+			        "bProcessing": true,
+			        "bServerSide": true,
+			        "sAjaxSource": "data_tables_server_side.pl"
+
+
+				});
 			} );
 		</script>
 	</head>
@@ -71,17 +77,21 @@ my %etc_hosts = cargarHost("hosts");
 					</tr>
 				</thead>
 				<tbody>
+				<tr>
+					<td>IP</td>
+					<td>HOSTAME</td>
+				</tr>
 HTML
 			foreach (keys(%etc_hosts)){
-				print "<tr>";
-					print "<td>";
-					print $_;
-					print "</td>";
-					print "<td>";
-					print $etc_hosts{$_};
-					print "</td>";
+				# print "<tr>";
+				# 	print "<td>";
+				# 	print $_;
+				# 	print "</td>";
+				# 	print "<td>";
+				# 	print $etc_hosts{$_};
+				# 	print "</td>";
 
-				print "</tr>";
+				# print "</tr>";
 			}
 		print <<HTML;
 			</tbody>
