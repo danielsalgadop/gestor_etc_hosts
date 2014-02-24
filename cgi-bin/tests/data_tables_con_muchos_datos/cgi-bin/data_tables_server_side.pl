@@ -41,14 +41,18 @@ $json_mock{iTotalRecords} = $num_total_records;
 my $contador_display_length = $q->param('iDisplayLength');
 my $contador_display_start = $q->param('iDisplayStart');
 my $contador = 0;
-foreach my $ip(keys(%etc_hosts)){
+my $valor_ultimo_contador = $contador_display_length + $contador_display_start;
+foreach my $ip(sort(keys(%etc_hosts))){
+	# logica de paginacion
+	$contador++;
 	next if $contador < $contador_display_start;
+	
+	last if $contador > $valor_ultimo_contador;
+
 	# if($ip =~ /10.250/){
 	push(@aaData,[$ip, $etc_hosts{$ip}]);   # no vale que aaData sea un array con los datos, tiene que ser un array de arrays
 
 	# }
-	$contador++;
-	last if $contador == $contador_display_length;
 }
 
 $json_mock{iTotalDisplayRecords} = $num_total_records;
