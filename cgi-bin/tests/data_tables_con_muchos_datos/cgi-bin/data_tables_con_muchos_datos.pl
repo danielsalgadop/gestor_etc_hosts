@@ -27,6 +27,8 @@ my $path_web = "/carga_datatables";
 				\$('#example').dataTable({
 			        "bProcessing": true,
 			        "bServerSide": true,
+			        // "sScrollY": "200px",
+			        // "iDisplayLength":100,
 			        "sAjaxSource": "data_tables_server_side.pl"
 
 
