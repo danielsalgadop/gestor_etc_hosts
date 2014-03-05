@@ -15,7 +15,7 @@ our $name_app;
 my $q = new CGI;
 print $q->header;
 
-print $q->div( { -id => "errores" }, "menudo errror TOE", );
+print $q->div( { -id => "errores" }, "", );  # se rellena desde  javascript
 
 print $q->start_html(
     -title  => 'Gestor ETC HOSTS',
