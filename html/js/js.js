@@ -12,31 +12,29 @@ function validate_login_form(){
 	}
 
 	// DEGUB
-	// errores = [];    // fuerzo q js no detecte errore
+	array_errores = [];    // fuerzo q js no detecte errore
 
-
-	if(array_errores > 0){
+	if(array_errores.length > 0){
 		mostrarErroresEnJs(array_errores);
 	}
-	esle{ // no hay errores de validacion detectado por js
+	else{ // no hay errores de validacion detectado por js
 	// lanzar ajax, validar desde perl
 		$.ajax({
-				url: "verificar_login.pl",
-				cache: false,
-				async: false,
-				dataType:"json",
-				data:{"nombre":nombre, "apellidos":apellidos,"email":email,"pais":pais,"ciudad":ciudad,"checkbox_acepto":checkbox_acepto},
-				// data:{"nombre":nombre, "apellidos":apellidos, "email":email, "pais":pais, "ciudad":ciudad,"checkbox_acepto",checkbox_acepto},
-				success: function(response){ // response es un json
-					// var json_response = response;
-					if(response.result == "OK"){
+			url: "verificar_login.pl",
+			cache: false,
+			async: false,
+			dataType:"json",
+			data:{"nombre":valor_nombre, "contrasenya":valor_contrasenya},
+			success: function(response){ // response es un json
+				// var json_response = response;
+				if(response.result == "OK"){
 					// Todo ha ido bien, redirijo
 					// window.top.location = libros[actual_libro].path_dentro_de_facebook;
 					alert("REDIRIGIR");
 				}
 				else{ // hay algun error detectado por PHP
 					alert("errorDetectado en perl");
-					mostrarErroresEnJs(response.errores); // response.errores es un array igual al array errores
+					// mostrarErroresEnJs(response.errores); // response.errores es un array igual al array errores
 				}
 			}
 		});

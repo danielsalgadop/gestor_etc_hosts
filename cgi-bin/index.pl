@@ -14,7 +14,7 @@ our $name_app;
 
 my $q = new CGI;
 print $q->header;
-
+print "<br><br><br><br><br>\n";
 print $q->div( { -id => "errores" }, "", );  # se rellena desde  javascript
 
 print $q->start_html(
