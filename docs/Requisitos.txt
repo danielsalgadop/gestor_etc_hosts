@@ -1,6 +1,7 @@
 PRODUCCION:REMO 10.0.224.92
 librerias_perl
 CGI
+JSON
 
 
 Una web donde puedas dar GESTIONAR hosts (etc/hosts)

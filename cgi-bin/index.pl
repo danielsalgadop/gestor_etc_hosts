@@ -44,12 +44,14 @@ print $q->start_form(
 print $q->textfield(
     -name      => 'nombre',
     -id        => 'nombre',
+    -value        => 'AFUEGO',
     -size      => 20,
     -maxlength => 99,
 );
 print $q->textfield(
     -name      => 'contrasenya',
     -id        => 'contrasenya',
+    -value        => '123qwe',
     -size      => 20,
     -maxlength => 99,
 );

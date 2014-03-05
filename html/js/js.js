@@ -5,14 +5,14 @@ function validate_login_form(){
 
 
 	if(!validarNombre( valor_nombre ) ){
-		array_errores.push("nombre invalido");
+		array_errores.push("nombre invalido JS");
 	}
 	if(!validarContrasenya( valor_contrasenya ) ){
-		array_errores.push("contrasenya invalido");
+		array_errores.push("contrasenya invalido JS");
 	}
 
 	// DEGUB
-	array_errores = [];    // fuerzo q js no detecte errore
+	// array_errores = [];    // fuerzo q js no detecte errore
 
 	if(array_errores.length > 0){
 		mostrarErroresEnJs(array_errores);
@@ -23,17 +23,19 @@ function validate_login_form(){
 			url: "verificar_login.pl",
 			cache: false,
 			async: false,
+			type: "POST",
 			dataType:"json",
 			data:{"nombre":valor_nombre, "contrasenya":valor_contrasenya},
 			success: function(response){ // response es un json
+				console.log(response);
 				// var json_response = response;
 				if(response.result == "OK"){
 					// Todo ha ido bien, redirijo
 					// window.top.location = libros[actual_libro].path_dentro_de_facebook;
-					alert("REDIRIGIR");
+					alert("RESULT OK");
 				}
 				else{ // hay algun error detectado por PHP
-					alert("errorDetectado en perl");
+					// alert("errorDetectado en perl");
 					// mostrarErroresEnJs(response.errores); // response.errores es un array igual al array errores
 				}
 			}

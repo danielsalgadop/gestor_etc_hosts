@@ -6,24 +6,29 @@ use strict;
 
 sub validaNombre($){
 	my $nombre = shift;
-	if(!&estaVacio($nombre)){
-		return 1;
-	}
-	return 0;
+	return &estaVacio($nombre);
+
+	# if(&estaVacio($nombre)){
+	# 	return 1;
+	# }
+	# return 0;
 }
 
 
 sub validaContrasenya($){
 	my $contrasenya = shift;
-	if(!&estaVacio($contrasenya)){
-		return 1;
-	}
-	return 0;
+	return &estaVacio($contrasenya);
+	
+	# if(&estaVacio($contrasenya)){
+	# 	return 1;
+	# }
+	# return 0;
 }
 
 
 sub estaVacio($){
-	return $=~/^\s*$/;
+	my $vacio_o_rellno = shift;
+	return $vacio_o_rellno =~ /^\s*$/;
 }
 
 1;

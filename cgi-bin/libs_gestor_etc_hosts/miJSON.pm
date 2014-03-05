@@ -1,18 +1,17 @@
 #!/usr/bin/perl
 use warnings;
 use strict;
-use Switch;
-
+use JSON;
 
 # --- Lee una linea de archivo JSON. --- #
 sub LeeJson($){
-  
+
   my $archivo=shift;
   # --- DATOS GENERICOS. --- #
   open(CONFIG,"$archivo");
     my @Config=<CONFIG>;
   close(CONFIG);
-  
+
   my $jsoncfg= new JSON;
   my $enperlcfg = $jsoncfg->decode($Config[0]);
   my %Hcfg = %$enperlcfg;
@@ -39,6 +38,8 @@ sub CodificaJson($){
   my $dato=shift;
 
   my $json=new JSON;
+
+  # $json = $json->allow_nonref(1);
   my $informacion=$json->encode($dato);
 
   return($informacion);

@@ -1,4 +1,6 @@
 #!/usr/bin/perl
+use warnings;
+use strict;
 
 # recibe los datos introducidos en index.pl
 # valida desde perl nombre y contrasenya
@@ -6,8 +8,7 @@
 use CGI;
 use lib 'libs_gestor_etc_hosts';
 use variables_globales;
-use warnings;
-use strict;
+use miJSON;
 use Switch;
 
 sub autenticar($$) {
