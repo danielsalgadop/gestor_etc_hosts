@@ -23,12 +23,11 @@ my %return;
 
 $return{result} = "FAIL: hay errores1";
 
-my $nombre;
-my $contrasenya;
+# recojo valores enviados
+my $nombre      = $q->param("nombre");
+my $contrasenya = $q->param("contrasenya");
 
-if ( $q->param("nombre") && $q->param("contrasenya") ) {
-    $nombre      = $q->param("nombre");
-    $contrasenya = $q->param("contrasenya");
+if ( defined($nombre) && defined($contrasenya) ) {
 
 # print "param RECIBIDOS Y CON VALOR nombre=[".$nombre."] contrasenya=[".$contrasenya."]\n";
 
@@ -54,9 +53,6 @@ if (@errores) {
 else {
     # validaciones han dado ok, hay que autenticar
     $return{result} = "OK";
-
-
-    
 }
 
 my $json = CodificaJson( \%return );

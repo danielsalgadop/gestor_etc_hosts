@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 use lib 'libs_gestor_etc_hosts';
 use variables_globales;
+# use bootApp;
 use strict;
 use warnings;
 
@@ -42,14 +43,14 @@ print $q->start_form(
 print $q->textfield(
     -name      => 'nombre',
     -id        => 'nombre',
-    -value        => 'AFUEGO',
+    -value        => 'nombre',
     -size      => 20,
     -maxlength => 99,
 );
 print $q->textfield(
     -name      => 'contrasenya',
     -id        => 'contrasenya',
-    -value        => '123qwe',
+    -value        => 'contrasenya',
     -size      => 20,
     -maxlength => 99,
 );
