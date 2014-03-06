@@ -3,6 +3,7 @@ use warnings;
 use strict;
 use JSON;
 
+
 # --- Lee una linea de archivo JSON. --- #
 sub LeeJson($){
 
@@ -45,5 +46,20 @@ sub CodificaJson($){
   return($informacion);
 
 }#Cierra sub CodificaJson($)
+
+# lee un fichero entero y devuelve un hash con el contenido
+sub fileJson2Hash($){
+  my $path_absolute_to_file = shift;
+  my $json;
+  {
+    local $/; #Enable 'slurp' mode   <<<< esta es la clave (que no 'trocee' linea a linea)
+    open my $fh, "<", $path_absolute_to_file;
+    $json = <$fh>;
+    close $fh;
+  }
+  my %datos_en_perl = DecodificaJson($json);
+  return(%datos_en_perl);
+
+}
 
 1;

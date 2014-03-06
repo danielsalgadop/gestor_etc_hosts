@@ -22,7 +22,7 @@ if($r_bootApp{status} ne "OK"){
     map{print $_."<br>\n"} @errores;
     exit;
 }
-print "<br><br><br><br><br>\n";
+print "<br><br>\n";   # meter esto con css en <div id="errores"></div>
 print $q->div( { -id => "errores" }, "", );  # se rellena desde  javascript
 
 print $q->start_html(

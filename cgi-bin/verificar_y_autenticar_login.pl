@@ -38,21 +38,32 @@ if ( defined($nombre) && defined($contrasenya) ) {
         push( @errores, "contrasenya invalido PERL" );
     }
 
-    # print Dumper(@errores);
+    unless (@errores) {
+
+        # validaciones han dado ok, hay que autenticar
+        my %r_autenticar = autenticar($nombre, $contrasenya);
+        if ( $r_autenticar{status} ne "OK" ){
+            push( @errores, $r_autenticar{status} );
+        }
+    }
 }
 else {    # no he recibido los parametros necesarios
     push( @errores, "falta recepcion de parametros necesarios" );
 }
 
-# construir array errores
 if (@errores) {
+
+    # construir array errores
     $return{result} = "FAIL";
     my $ref = \@errores;
     $return{"errores"} = \@errores;
 }
 else {
-    # validaciones han dado ok, hay que autenticar
+
+    #validacion y autenticado ok
     $return{result} = "OK";
+
+    # generar SESSION
 }
 
 my $json = CodificaJson( \%return );

@@ -20,8 +20,9 @@ sub bootApp(){
 		# si la estructura de modelo es json
 		case "json"{
 			# comprobar que se puede leer el fichero que contiene los datos para autenticar
-			our $path_relativo_y_fichero_autenticar_json;
-			my %r_ficheroLeible = ficheroLeible($path_relativo_y_fichero_autenticar_json);
+			# TODO: comprobar que se trata de un json valido
+			our $path_absoluto_y_fichero_autenticar_json;
+			my %r_ficheroLeible = ficheroLeible($path_absoluto_y_fichero_autenticar_json);
 			if($r_ficheroLeible{status} ne "OK"){
 				push(@errores, @{$r_ficheroLeible{avalues}});
 			}

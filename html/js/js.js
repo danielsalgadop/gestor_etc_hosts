@@ -20,7 +20,7 @@ function validate_login_form(){
 	else{ // no hay errores de validacion detectado por js
 	// lanzar ajax, validar desde perl
 		$.ajax({
-			url: "verificar_login.pl",
+			url: "verificar_y_autenticar_login.pl",
 			cache: false,
 			async: false,
 			type: "POST",
@@ -35,7 +35,7 @@ function validate_login_form(){
 					alert("RESULT OK");
 				}
 				else{ // hay algun error detectado por PHP
-					// alert("errorDetectado en perl");
+					// alert("errorDetectado en perl O validacion o autenticacion");
 					mostrarErroresEnJs(response.errores); // response.errores es un array igual al array errores
 				}
 			}
