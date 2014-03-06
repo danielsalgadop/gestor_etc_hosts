@@ -31,8 +31,6 @@ print $q->start_html(
 );
 
 my $error;
-print "usar CGI<br>";
-print "autenticar<br>";
 
 print $q->start_form(
     -name    => 'login',

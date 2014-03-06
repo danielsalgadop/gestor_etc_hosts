@@ -13,10 +13,9 @@ use strict;
 use Switch;
 use Data::Dumper;
 
-
 my $q = new CGI;
 print $q->header('application/json');
-our $estructura_modelo;  # variables_globales.pm
+our $estructura_modelo;    # variables_globales.pm
 
 my @errores;
 
@@ -24,53 +23,41 @@ my %return;
 
 $return{result} = "FAIL: hay errores1";
 
-
-
 my $nombre;
 my $contrasenya;
 
-if (  $q->param("nombre") && $q->param("contrasenya") ) {
-	$nombre = $q->param("nombre");
-	$contrasenya = $q->param("contrasenya");
+if ( $q->param("nombre") && $q->param("contrasenya") ) {
+    $nombre      = $q->param("nombre");
+    $contrasenya = $q->param("contrasenya");
 
-	# print "param RECIBIDOS Y CON VALOR nombre=[".$nombre."] contrasenya=[".$contrasenya."]\n";
+# print "param RECIBIDOS Y CON VALOR nombre=[".$nombre."] contrasenya=[".$contrasenya."]\n";
 
-	if (!validaNombre($nombre) ){
-		push(@errores, "nombre invalido");
-	}
+    if ( !validaNombre($nombre) ) {
+        push( @errores, "nombre invalido PERL" );
+    }
+    if ( !validaContrasenya($contrasenya) ) {
+        push( @errores, "contrasenya invalido PERL" );
+    }
 
-	# print Dumper(@errores);
-
-	if(@errores){
-		# $errores[1] = "error uno";
-		# $errores[2] = "error dos";
-		my @errores2 = ("error uno", "error2");
-		my $ref = \@errores2;
-		$return{result} = "FAIL: hay errores2222";
-
-		# $return{errores} = ("erroraurrrr uno", "erroraurrrr2", "erroraurrrr3333332");
-		
-		# $return{errores} = "erroraurrrr uno";
-		$return{"errores"} = @errores2;
-		# $return{"errores"} = $ref;
-
-	}
-	else{
-		# validaciones han dado ok, hay que autenticar
-		$return{result}="OK";
-
-	}
-
+    # print Dumper(@errores);
 }
-else{  # no he recibido los parametros necesarios
-	$return{result} = "FAIL : falta recepcion de parametros necesarios";
-	# print '{"result":"FAIL","errores":["falta recepcion de parametros necesarios"]}';
-
+else {    # no he recibido los parametros necesarios
+    push( @errores, "falta recepcion de parametros necesarios" );
 }
 
-# devuelvo la respuesta %return
-my @errores3 = ("e323232rror uno", "error2");
+# construir array errores
+if (@errores) {
+    $return{result} = "FAIL";
+    my $ref = \@errores;
+    $return{"errores"} = \@errores;
+}
+else {
+    # validaciones han dado ok, hay que autenticar
+    $return{result} = "OK";
 
-my %return2 = {"result"=> "toe", "errores" => \@errores3};
-my $json = CodificaJson(\%return2);
+
+    
+}
+
+my $json = CodificaJson( \%return );
 print $json;

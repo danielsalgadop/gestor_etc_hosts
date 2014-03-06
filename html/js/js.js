@@ -36,7 +36,7 @@ function validate_login_form(){
 				}
 				else{ // hay algun error detectado por PHP
 					// alert("errorDetectado en perl");
-					// mostrarErroresEnJs(response.errores); // response.errores es un array igual al array errores
+					mostrarErroresEnJs(response.errores); // response.errores es un array igual al array errores
 				}
 			}
 		});
