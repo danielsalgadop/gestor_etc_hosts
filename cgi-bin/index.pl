@@ -1,7 +1,8 @@
 #!/usr/bin/perl
 use lib 'libs_gestor_etc_hosts';
 use variables_globales;
-# use bootApp;
+use bootApp;
+my %r_bootApp = bootApp();
 use strict;
 use warnings;
 
@@ -15,6 +16,12 @@ our $name_app;
 
 my $q = new CGI;
 print $q->header;
+if($r_bootApp{status} ne "OK"){
+    print "ERROR GRAVE<br>\n";
+    my @errores = @{$r_bootApp{errores}};
+    map{print $_."<br>\n"} @errores;
+    exit;
+}
 print "<br><br><br><br><br>\n";
 print $q->div( { -id => "errores" }, "", );  # se rellena desde  javascript
 
