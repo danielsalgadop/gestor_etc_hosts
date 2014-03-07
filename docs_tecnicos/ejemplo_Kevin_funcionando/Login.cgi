@@ -26,7 +26,7 @@ use CGI::Carp qw'fatalsToBrowser warningsToBrowser';
 
 my $cgi = CGI->new(); # Variable CGI
 my $session = CGI::Session->new("driver:File", $cgi, {'Directory'=>'/tmp/'}) or die CGI::Session->errstr; # Sesion que contiene la informacion del
-                                                                                                          # usuario, se almacena en la carpeta 'tmp'.
+                                 
 print $session->header; #Para recuperar cookies si no, la página no carga.
 my $usuario; # Datos del usuario que tiene una sesion activa.
 

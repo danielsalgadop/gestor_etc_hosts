@@ -3,6 +3,7 @@
 # recibe los datos introducidos en index.pl
 # valida desde perl nombre y contrasenya
 # autentica el nombre y contsenya, si es correcto genera la sesion
+use CGI::Session;
 use CGI;
 use lib 'libs_gestor_etc_hosts';
 use variables_globales;
@@ -64,6 +65,14 @@ else {
     $return{result} = "OK";
 
     # generar SESSION
+    my $session = CGI->new(); # Variable CGI.
+
+    my $CGISESSID = $session->param('CGISESSID');                                           # Recuperamos la session.
+    my $session = new CGI::Session("driver:File", $CGISESSID, {'Directory'=>'/tmp/'});  # Session actual.
+
+                $session->param('~logeado', 1);         #       # logeado=1 indica que la session esta activa.
+            $session->save_param();     #           #       #
+            $session->expire('~logeado', '+20m');   #       # Tiempo de expedición de la sesión 10 
 }
 
 my $json = CodificaJson( \%return );

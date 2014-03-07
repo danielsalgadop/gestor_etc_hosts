@@ -2,7 +2,7 @@ PRODUCCION:REMO 10.0.224.92
 librerias_perl
 CGI
 JSON
-
+CGI::Session (en ubuntu es libcgi-session-perl)
 
 Una web donde puedas dar GESTIONAR hosts (etc/hosts)
 y asi evitar que metan a mano cosas "chungas"
