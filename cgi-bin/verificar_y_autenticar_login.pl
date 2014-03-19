@@ -68,7 +68,7 @@ else {
     my $session = CGI->new(); # Variable CGI.
 
     my $CGISESSID = $session->param('CGISESSID');                                           # Recuperamos la session.
-    my $session = new CGI::Session("driver:File", $CGISESSID, {'Directory'=>'/tmp/'});  # Session actual.
+    $session = new CGI::Session("driver:File", $CGISESSID, {'Directory'=>'/tmp/'});  # Session actual.
 
                 $session->param('~logeado', 1);         #       # logeado=1 indica que la session esta activa.
             $session->save_param();     #           #       #

@@ -31,8 +31,9 @@ function validate_login_form(){
 				// var json_response = response;
 				if(response.result == "OK"){
 					// Todo ha ido bien, redirijo
-					// window.top.location = libros[actual_libro].path_dentro_de_facebook;
-					alert("RESULT OK");
+					document.forms["login"].submit();
+					// alert("RESULT OK");
+
 				}
 				else{ // hay algun error detectado por PHP
 					// alert("errorDetectado en perl O validacion o autenticacion");

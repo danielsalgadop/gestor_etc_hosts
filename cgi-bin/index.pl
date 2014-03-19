@@ -56,7 +56,7 @@ if(not $session->param('~logeado')){
         -name    => 'login',
         -method  => 'POST',
         -enctype => &CGI::MULTIPART,
-        -action  => '/'.$name_app.'/gestor_etc_hosts.pl',    # Defaults to
+        -action  => '/cgi-bin/'.$name_app.'/gestor_etc_hosts.pl',    # Defaults to
                                                      # the current program
     );
     print $q->textfield(
